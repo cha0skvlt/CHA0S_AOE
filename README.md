@@ -2,8 +2,6 @@
 
 **Your machine. Your agents. Your rules.**
 
-[![Demo](https://img.youtube.com/vi/PLACEHOLDER/maxresdefault.jpg)](https://piniq.ai/cha0s)
-
 A native Rust environment where agents work alongside you: your shell, your files, your data, your browser. One binary, GPU-rendered, zero telemetry. Runs on any model — local or by API.
 
 > [!NOTE]
