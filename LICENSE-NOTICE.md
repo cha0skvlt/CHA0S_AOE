@@ -4,6 +4,8 @@
 
 **CHA0S AOE** is a closed-source product by piniq.ai. The product is distributed as a signed binary under the terms of the End User License Agreement delivered with it (and mirrored at [piniq.ai](https://piniq.ai)). The EULA grants a right to use the delivered binary. It is not a source license.
 
+Paid access keys are issued for **1 year (365 days)**; the demo key is 3 days. A key is checked offline and expires at its signed `expires_utc`; expiry opens the hard Briefing gate until a new key is applied. There is no auto-renewal and no key server.
+
 This repository contains **no source code**. It is the product's public home: documentation, release binaries, GPG signatures, and the issue tracker.
 
 ## Engine foundation and AGPL-3.0

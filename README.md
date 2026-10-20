@@ -45,7 +45,14 @@ Runs on any model. Ollama gives a fully offline, completely private circuit. Bri
 
 - **3-day demo key, free**: talk to [@piniqai_bot](https://t.me/piniqai_bot) on Telegram → `/key`
 - **Download**: `/download` in the bot, or [Releases](releases) (GPG-signed)
-- **Buy**: $149 one-time, major-version license (2.x forever). [piniq.ai/cha0s](https://piniq.ai/cha0s)
+- **Buy**: $149 for a 1-year license (365 days). [piniq.ai/cha0s](https://piniq.ai/cha0s)
+
+## License
+
+- **Demo**: 3 days, free.
+- **Paid**: $149 for a 1-year key (365 days). The key is signed offline and checked locally; no key server, no HWID, no account.
+- **Expiry**: the app shows the remaining days. When the key expires, the app opens the hard Briefing gate until a new key is applied. There is no auto-renewal and no automatic charge.
+- **Renewal**: buy a new 1-year key; the old key is not extended in place.
 
 ## Documentation
 

@@ -6,7 +6,7 @@ What's ahead for CHA0S AOE. Not promises — direction. Items move as the produc
 
 - **Release binaries**: macOS `.dmg` (universal) in GitHub Releases, GPG-signed, served from [piniq.ai/files](https://piniq.ai/files) and the demo bot.
 - **Linux acceptance**: bring the Linux build to operator-accepted parity with macOS and ship it — the first post-release platform priority. Red team, OSINT, and local-model work live on Linux.
-- **Payments**: buy a full license ($149 one-time, major-version 2.x) with crypto — through [@piniqai_bot](https://t.me/piniqai_bot).
+- **Payments**: buy a 1-year license ($149, 365 days) with crypto — through [@piniqai_bot](https://t.me/piniqai_bot).
 - **Demo content**: short operation videos — agent drives the browser over onion, SSHes to a server, writes the report — for the README and the site.
 
 ## Mid
@@ -24,4 +24,4 @@ What's ahead for CHA0S AOE. Not promises — direction. Items move as the produc
 
 ---
 
-*The rifle and the ammo are separate. The knowledge store is dated consumable, not part of the lock and not a subscription.*
+*The rifle and the ammo are separate. The knowledge store is dated consumable, not part of the lock; the license is annual and does not auto-renew.*

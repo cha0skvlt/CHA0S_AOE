@@ -32,7 +32,7 @@ First public release of CHA0S AOE — Agentic Operations Environment.
 ### Privacy
 - Zero telemetry. No analytics, no crash-report send flow, no update checks, no vendor cloud.
 - Metrics bind to loopback only; `CHA0S_METRICS=0` silences them entirely.
-- Offline Ed25519 license keys — no key server, no HWID, no account.
+- Offline Ed25519 license keys — no key server, no HWID, no account. Paid keys are 1-year (365 days); the demo is 3 days. Expiry opens the hard Briefing gate; no auto-renewal.
 
 ### Access
 - Passphrase door (Argon2id) on the loaded session; fast interface lock.

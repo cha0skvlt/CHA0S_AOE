@@ -1,6 +1,6 @@
 # PRODUCT.md — what CHA0S is
 
-> Product version: **2.0.0** · verified against the code: **2026-10-13 UTC**
+> Product version: **2.0.0** · verified against the code: **2026-10-20 UTC**
 > Renewal rule: on any doc change, re-verify claims against the code and update both fields.
 
 The product definition: what CHA0S is, its goals, and how each goal is implemented right now. Stated declaratively. The code is the source of truth for behavior; when the product must change, this file is updated first, then the code. This file is the neutral, dual-use description of the product for any audience; the operational doctrine lives in the last section, unchanged in substance.
@@ -33,6 +33,7 @@ The operational model is: **operator → objective → agent → tools + memory 
 | Product | CHA0S — Agentic Operations Environment by piniq.ai |
 | Version | `2.0.0` (`crates/cha0s` package version) |
 | Delivery | per the EULA delivered with the product |
+| License term | Paid key: **1 year (365 days)**; demo: 3 days. Offline Ed25519, no key server, no HWID. Expiry opens the hard Briefing gate until a new key is applied; no auto-renewal. |
 | Platforms | macOS ✅ primary; Linux ✅ in tree; Windows ❌ frozen |
 | macOS app | `CHA0S AOE.app` (`CHA0S AOE Dev.app` on dev). Bundle id `ai.piniq.CHA0S`. URL scheme `cha0s`. Runtime data/config paths use `CHA0S` / `cha0s`. |
 
@@ -93,7 +94,7 @@ The surfaces below are instruments available during an operation. None of them d
 - ✅ `search_onion`: onion indexes through Tor, plus a baked seed catalog.
 - ✅ `search_i2p`: I2P indexes through i2pd, plus an overlay addressbook engine.
 - ✅ `fetch`: URL → markdown with redirect handling, SSRF refusal of loopback/private targets, and page-wall fallback to the live pane.
-- ⚠️ `search_web` (a single conventional web-search provider) exists in the catalog and refuses to run unless `agent.browsing` is explicitly enabled.
+- ⚠️ `search_web` is a retired catalog name: it is not one of the 26 tools and resolves to `search_clearnet`; the old single-provider path refuses to run unless `agent.browsing` is explicitly enabled.
 
 ### 3.6 Logs and observability
 
@@ -112,12 +113,12 @@ The surfaces below are instruments available during an operation. None of them d
 ### 4.1 Runtime
 
 - ✅ Default brain: a local model via Ollama on the same machine. No internet required. Cloud model providers are operator-enabled options, not the default path.
-- ✅ 26 catalog tools (`ALL_TOOL_NAMES`, smoke-asserted): files, terminal, browser, network, environment control, knowledge base, skills, plan, and `solo`. `add_default_tools` plants every name except `skill` (planted by `NativeAgent` with a body resolver) plus the internal `sandboxed_terminal` variant. The model-facing set drops `search_web`, `kb`, and `db` from the offered list and folds `terminal` + `console_pane` into one face named `terminal`.
+- ✅ 26 catalog tools (`ALL_TOOL_NAMES`, smoke-asserted): files, terminal, browser, network, environment control, knowledge base, skills, plan, and `solo`. `add_default_tools` plants 25 of those names plus the internal `sandboxed_terminal` variant; `skill` is planted by `NativeAgent` with a body resolver. The model-facing set folds `terminal` + `console_pane` into one face named `terminal`; the retired names `search_web`, `kb`, and `db` resolve to `search_clearnet` and `database`.
 - ✅ Solo cycles: the moon is a switch. The operator turns it on, then sends a message with the arrow. That message is the instruction, and the turn says the solo cycle is on. The `solo` tool is offered only while a cycle is running. The moon stays blue while the switch is on. Turning it off clears the moon immediately. The current reply or tool finishes, the agent writes the closing report, then the cycle ends. The Stop button still aborts. A tool-free round continues the segment until the moon is off, the agent calls `declare_done`, or app quit. The loop guard does not end the cycle. Three identical calls are allowed; the fourth closes that tool for the rest of the cycle, shows the refusal once, and drops it from the next request. Other tools stay. Three error results close that tool the same way. A console read of one tab is the key `terminal:read`. Poll fields and the `cmd` / `action` aliases do not open another read of that screen. A different tab is a different screen. The second read of a tab does not run and does not close `terminal`. A read that errors does not hold the screen. One card shows the refusal. A successful `op=run`, `op=kill`, or `op=new_tab` on that tab allows one later read of it. Other calls do not. The first batch that is only that refusal continues the cycle once. The next such batch stops the turn and leaves the cycle running. A hard provider failure stays in the running cycle. After the short provider retries, a transient failure waits 5 minutes, then 30 minutes, and the third ends the cycle as `Solo ended (provider)` with one `Solo ended.` line. The moon says `Solo retrying` during a wait. An error the short retries will not try (missing key, payment, 401/403, prompt too large) ends on the first. A model refusal still pauses and does not cut the thread. The composer stays locked until the cycle ends. There is no time, tool, or token limit. The button does not create a thread and has no mode or budget menu. Class-2 actions queue for approval instead of running. The `db` tool still runs: it is read-only, and a queued query would have no one to approve it.
 - ✅ Every tool call returns a structured result (`ToolOutcome`); deadlines per call; retry policy only for idempotent reads.
 - ✅ Turn discipline: an order → work → report cycle. The turn ends with a visible report; the agent is never nagged to "keep working".
 - ✅ Long conversations are compacted automatically; tool-result history is truncated with a recent-keep window.
-- ✅ Privacy on the wire: local filesystem paths are rewritten to generic aliases in outbound model requests.
+- ✅ Privacy on the wire: outbound cloud requests redact complete `CHA0S-1.…` license keys; local filesystem paths are sent as real absolute paths (path aliasing was removed by operator decision).
 
 ### 4.2 The environment as the agent's control panel
 
@@ -171,6 +172,7 @@ One switch in the agent footer, to the right of Database (`local_fs_lock`, defau
 ## 7. What the product does not have
 
 - ❌ Vendor cloud account, remote disable, key server, or machine binding (HWID). A signed key is checked locally.
+- ❌ Perpetual license. Paid keys are 1-year (365 days); expiry opens the hard Briefing gate until a new key is applied.
 - ❌ Built-in vendor knowledge corpus, model downloads, content feeds.
 - ❌ Crash-report "send" flow, extension marketplace, auto-update.
 - ❌ Multi-agent collaboration, foreign CLI agents in the panel.
@@ -184,7 +186,7 @@ CHA0S is a tool, not a textbook and not a temple. Code is not the destination: i
 
 The model is the AK-74: simple, fires dirty, keeps firing. Not a Swiss watch, not a showroom piece.
 
-The rifle and the ammo are separate. CHA0S fires without a magazine: the knowledge store is dated consumable, not part of the lock and not a subscription.
+The rifle and the ammo are separate. CHA0S fires without a magazine: the knowledge store is dated consumable, not part of the lock; the license is annual and does not auto-renew.
 
 The operator pulls the trigger. The agent fires. The report states the target status. That is all.
 
