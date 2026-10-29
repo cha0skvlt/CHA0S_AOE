@@ -1,6 +1,6 @@
 # CHA0S AOE — repository architecture
 
-> Product version: **2.0.0** · verified against the code: **2026-10-20 UTC**
+> Product version: **2.0.1** · verified against the code: **2026-10-29 UTC**
 > Renewal rule: on any doc change, re-verify claims against the code and update both fields.
 
 This file is the map of the code as it exists now: crates, startup, identities. It is not the product definition — see [PRODUCT.md](PRODUCT.md) for that; the code itself is the source of truth for both.
@@ -35,7 +35,7 @@ Git is a backup of this tree, not a product workflow (no PRs, no feature branche
 | Product | CHA0S — Agentic Operations Environment by piniq.ai |
 | GUI binary | `cha0s` (`[[bin]]` in [crates/cha0s/Cargo.toml](crates/cha0s/Cargo.toml)) |
 | CLI binary | `cli` (`crates/cli`), installed into the `.app` as `Contents/MacOS/cli` |
-| Version | `2.0.0` (`crates/cha0s` package version) |
+| Version | `2.0.1` (`crates/cha0s` package version) |
 | Release channel file | [crates/cha0s/RELEASE_CHANNEL](crates/cha0s/RELEASE_CHANNEL) = `stable` |
 | License | Closed source, EULA terms delivered with the product; no public source license. Paid key: **1 year (365 days)**; demo: 3 days. See [LICENSE-NOTICE.md](../LICENSE-NOTICE.md) |
 | Public display name | `CHA0S` |

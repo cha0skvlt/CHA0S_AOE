@@ -1,6 +1,6 @@
 # PRODUCT.md — what CHA0S is
 
-> Product version: **2.0.0** · verified against the code: **2026-10-20 UTC**
+> Product version: **2.0.1** · verified against the code: **2026-10-29 UTC**
 > Renewal rule: on any doc change, re-verify claims against the code and update both fields.
 
 The product definition: what CHA0S is, its goals, and how each goal is implemented right now. Stated declaratively. The code is the source of truth for behavior; when the product must change, this file is updated first, then the code. This file is the neutral, dual-use description of the product for any audience; the operational doctrine lives in the last section, unchanged in substance.
@@ -31,7 +31,7 @@ The operational model is: **operator → objective → agent → tools + memory 
 | Field | Value |
 | --- | --- |
 | Product | CHA0S — Agentic Operations Environment by piniq.ai |
-| Version | `2.0.0` (`crates/cha0s` package version) |
+| Version | `2.0.1` (`crates/cha0s` package version) |
 | Delivery | per the EULA delivered with the product |
 | License term | Paid key: **1 year (365 days)**; demo: 3 days. Offline Ed25519, no key server, no HWID. Expiry opens the hard Briefing gate until a new key is applied; no auto-renewal. |
 | Platforms | macOS ✅ primary; Linux ✅ in tree; Windows ❌ frozen |

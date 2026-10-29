@@ -2,6 +2,17 @@
 
 All notable changes to CHA0S AOE are documented here. Dates are UTC. Each release tag is GPG-signed; signatures live next to the binaries in [Releases](releases).
 
+## 2.0.1 — 2026-10-29
+
+Bug-fix release. No new product surface.
+
+### Fixed
+- License terms are stated consistently: paid keys are 1 year (365 days), demo 3 days; expiry opens the hard Briefing gate; no auto-renewal.
+- Tool catalog corrected to the shipped 26 names: `database` and `wait` are in; `search_web`, `kb`, and `db` are retired names that resolve to `search_clearnet` and `database`.
+- Loop guard: read-only calls bypass it; a repeated mutating call is skipped, not a turn kill. Lookup progress replaces the old read-guard.
+- Cloud privacy: path aliasing removed; cloud models see real absolute paths. Complete `CHA0S-1.…` license keys are still redacted.
+- Documentation aligned with the code (ARCHITECTURE, PRODUCT, README, ROADMAP, LICENSE-NOTICE).
+
 ## 2.0.0 — 2026-10-13
 
 First public release of CHA0S AOE — Agentic Operations Environment.
