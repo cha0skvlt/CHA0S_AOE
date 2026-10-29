@@ -20,9 +20,9 @@ Bug-fix release of CHA0S AOE — Agentic Operations Environment.
 
 ## Download
 
-- **macOS (universal)**: [CHA0S-AOE-2.0.1-macos.dmg](https://piniq.ai/files/CHA0S-AOE-2.0.1-macos.dmg) — also attached below
-- Checksums: [checksums.txt](https://piniq.ai/files/checksums.txt)
-- GPG signatures: [dmg.sig](https://piniq.ai/files/CHA0S-AOE-2.0.1-macos.dmg.sig), [checksums.txt.sig](https://piniq.ai/files/checksums.txt.sig) — key `C981 2C7E 5860 44E2 3779  B828 72AC 40D1 A81F 144C`, verify per [SECURITY.md](https://github.com/cha0skvlt/CHA0S_AOE/blob/main/SECURITY.md)
+- **macOS (universal)**: [CHA0S-AOE-2.0.1-macos.dmg](https://github.com/cha0skvlt/CHA0S_AOE/releases/download/v2.0.1/CHA0S-AOE-2.0.1-macos.dmg) — attached below
+- Checksums: [checksums.txt](https://github.com/cha0skvlt/CHA0S_AOE/releases/download/v2.0.1/checksums.txt)
+- GPG signatures: [dmg.sig](https://github.com/cha0skvlt/CHA0S_AOE/releases/download/v2.0.1/CHA0S-AOE-2.0.1-macos.dmg.sig), [checksums.txt.sig](https://github.com/cha0skvlt/CHA0S_AOE/releases/download/v2.0.1/checksums.txt.sig) — key `C981 2C7E 5860 44E2 3779  B828 72AC 40D1 A81F 144C`, verify per [SECURITY.md](https://github.com/cha0skvlt/CHA0S_AOE/blob/main/SECURITY.md)
 
 ## Try it
 
