@@ -13,7 +13,7 @@ CHA0S AOE is a closed-source product. This repository is its public home — doc
 
 - Pull requests — closed with a pointer to the [PR template](.github/PULL_REQUEST_TEMPLATE.md).
 - Telemetry proposals, cloud features, account systems — the product is local-first and stays that way.
-- "Add a language server / debugger / extension marketplace" — read [docs/PRODUCT.md](docs/PRODUCT.md) §7 first; these are deliberate non-goals.
+- "Add a language server / debugger / extension marketplace" — read [README.md](README.md) first; these are deliberate non-goals.
 
 ## The pair
 

@@ -8,7 +8,7 @@ CHA0S AOE is an operational tool; its security is the operator's security. We tr
 2. Send it to `task@piniq.ai` with `[vuln]` in the subject.
 3. You will get an acknowledgment within 72 hours and a fix timeline after triage.
 
-Please include: the version (Briefing shows it), the platform, reproduction steps, and impact. We credit reporters in the changelog unless you prefer otherwise.
+Please include: the version (Briefing shows it), the platform, reproduction steps, and impact. We credit reporters in the release notes unless you prefer otherwise.
 
 ## PGP key
 
