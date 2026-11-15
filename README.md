@@ -20,8 +20,6 @@
 [![BYOK](https://img.shields.io/badge/models-BYOK%20%2B%20OpenAI%20compatible-412991?style=flat-square)](#models)
 ![Nix](https://img.shields.io/badge/build-Nix-5277C3?style=flat-square&logo=nixos&logoColor=white)
 
-**Your machine. Your agents. Your rules.**
-
 A native Rust environment where agents work alongside you: your shell, your files, your data, your browser. One binary, GPU-rendered, running on your disk. Runs on any model — local or by API.
 
 > [!NOTE]
