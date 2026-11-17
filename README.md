@@ -61,8 +61,6 @@ The shell is closed source. The tools around it are not:
 | [phylactery-mcp](https://github.com/cha0skvlt/phylactery-mcp) | the memory server: four circuits, typed graph, pgvector |
 | [downloader-mcp](https://github.com/cha0skvlt/downloader-mcp) | media engine: fetch, trim, convert, join, normalize |
 | [avatar-media-mcp](https://github.com/cha0skvlt/avatar-media-mcp) | avatar and media pipeline |
-| [single-vm-web-platform](https://github.com/cha0skvlt/single-vm-web-platform) | single-VM web deployment |
-| [single-vm-mail-platform](https://github.com/cha0skvlt/single-vm-mail-platform) | single-VM mail deployment |
 
 ## Get it
 
