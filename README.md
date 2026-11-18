@@ -1,6 +1,6 @@
 # CHA0S AOE
 
-**Agentic Operations Environment** — a native desktop environment where AI agents work on real systems.
+**Agentic Operations Environment** — a native Rust desktop environment where AI agents work on real systems.
 
 [![Version](https://img.shields.io/badge/version-2.0.1-blue?style=flat-square)](https://github.com/cha0skvlt/CHA0S_AOE/releases)
 [![License](https://img.shields.io/badge/license-EULA-orange?style=flat-square)](LICENSE-NOTICE.md)
