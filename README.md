@@ -46,7 +46,6 @@ The operator states the task and reviews the result. The agent operates tools an
 
 - **Not a cloud service.** Files, memory, databases and browsing stay on your disk. The binary runs offline: launch, keys, files, threads and the local-model agent need no network.
 - **Not a code assistant with extra buttons.** No extension marketplace, no language-server zoo, no debugger. The editor is a working surface, not the product.
-- **Not autonomous.** Nothing happens that you did not ask for. With the lock off, an agent's error is your order executed by the machine.
 
 ## Models
 
